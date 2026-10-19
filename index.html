@@ -151,6 +151,21 @@ p{margin:0 0 14px}
         <h3>Sistemas e gestão de projetos</h3>
 
         <article class="proj">
+          <div class="when"><span class="ph">[período]</span></div>
+          <div>
+            <h4>Portal de planejamento de compras de materiais (venda direta)</h4>
+            <p>Sistema web que puxa do ERP as peças de cada projeto e conduz todo o fluxo de compras: aprovação pelo analista master, aviso automático aos compradores e preenchimento detalhado de cada peça em um único portal.</p>
+            <dl>
+              <dt>Problema</dt><dd>O processo era um revezamento de planilhas: consultar o ERP, exportar para Excel, enviar uma planilha a cada analista, esperar o retorno e consolidar tudo à mão. Era lento, dependia de várias versões do mesmo arquivo e não dava ao master uma visão única do andamento.</dd>
+              <dt>Meu papel</dt><dd>Depois do sucesso do RPA, recebi o pedido do departamento de Planejamento de Compras e desenvolvi o sistema de ponta a ponta: integração com o ERP, regras do fluxo, perfis de acesso, envio de e-mails e publicação em contêiner Docker no servidor da empresa. Também preparei o sistema para a homologação da TI.</dd>
+              <dt>Resultado</dt><dd>O que era consultar, copiar, enviar e consolidar virou, em grande parte, um fluxo automático. As peças chegam do ERP, a aprovação do master dispara os e-mails para os compradores, e cada analista preenche o portal sem trocar planilhas. O master acompanha tudo em um só lugar, e uma peça nova ou uma quantidade alterada em projeto já aprovado é detectada sozinha e vai para revisão.</dd>
+              <dt>Destaques técnicos</dt><dd>Dois perfis (master e analista) com acesso restrito ao que cada um pode editar. Edição simultânea segura, com gravação só dos campos alterados, backups rotativos e verificação de integridade do banco. Migração da infraestrutura para o padrão da TI (Docker, PostgreSQL e segredos fora do código), revisão de segurança com base no OWASP Top 10 e scans de vulnerabilidade. Login corporativo com Microsoft Entra ID já preparado. Histórico de alterações de cada peça guardado como base para um futuro modelo de previsão de atrasos.</dd>
+            </dl>
+            <ul class="tags"><li>Python</li><li>Flask</li><li>Docker</li><li>PostgreSQL</li><li>Oracle</li><li>pandas</li><li>Integração com ERP</li><li>OWASP</li><li>Automação de e-mails</li></ul>
+          </div>
+        </article>
+
+        <article class="proj">
           <div class="when">ago/2025 – fev/2026</div>
           <div>
             <h4>Sistematização da gestão de projetos</h4>
