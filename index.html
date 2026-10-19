@@ -123,7 +123,7 @@ p{margin:0 0 14px}
       <h2>Sobre</h2>
       <p>Sou estagiário em Gestão de Projetos na HPE Automotores, onde uso dados e automação para tirar trabalho manual da frente das equipes e colocar informação confiável na mão de quem decide.</p>
       <p>Construo pipelines de ETL em Python sobre Oracle e SQL Server, indicadores com alertas estatísticos, dashboards para a gestão e rotinas de RPA. Também apoio o planejamento de projetos, o acompanhamento de cronogramas e planos de ação e a análise de causa raiz (8D), sempre com a mentalidade de Lean Six Sigma: medir, eliminar desperdício e entregar resultado verificável.</p>
-      <p>Meu diferencial é juntar as duas pontas: entendo o processo do negócio e sei automatizá-lo. Um exemplo: uma conferência que consumia 50 horas de analistas por mês passou a rodar para todos os projetos em 4 minutos, sem nenhum custo de licença.</p>
+      <p>Gosto de trabalhar entre as duas pontas: entender o processo do negócio e automatizá-lo. Um exemplo: uma conferência que consumia 50 horas de analistas por mês passou a rodar para todos os projetos em 4 minutos, sem nenhum custo de licença.</p>
     </section>
 
     <section id="projetos">
@@ -157,7 +157,7 @@ p{margin:0 0 14px}
             <p>Sistema web que puxa do ERP as peças de cada projeto e conduz todo o fluxo de compras: aprovação pelo analista master, aviso automático aos compradores e preenchimento detalhado de cada peça em um único portal.</p>
             <dl>
               <dt>Problema</dt><dd>O processo era um revezamento de planilhas: consultar o ERP, exportar para Excel, enviar uma planilha a cada analista, esperar o retorno e consolidar tudo à mão. Era lento, dependia de várias versões do mesmo arquivo e não dava ao master uma visão única do andamento.</dd>
-              <dt>Meu papel</dt><dd>Depois do sucesso do RPA, recebi o pedido do departamento de Planejamento de Compras e desenvolvi o sistema de ponta a ponta: integração com o ERP, regras do fluxo, perfis de acesso, envio de e-mails e publicação em contêiner Docker no servidor da empresa, onde roda em produção. Também preparei o sistema para a homologação da TI.</dd>
+              <dt>Meu papel</dt><dd>A pedido do departamento de Planejamento de Compras, desenvolvi o sistema de ponta a ponta: integração com o ERP, regras do fluxo, perfis de acesso, envio de e-mails e publicação em contêiner Docker no servidor da empresa, onde roda em produção. Também preparei o sistema para a homologação da TI.</dd>
               <dt>Resultado</dt><dd>O que era consultar, copiar, enviar e consolidar virou, em grande parte, um fluxo automático. As peças chegam do ERP, a aprovação do master dispara os e-mails para os compradores, e cada analista preenche o portal sem trocar planilhas. Em produção, é usado por 2 analistas master e 8 analistas individuais. O master acompanha tudo em um só lugar, e uma peça nova ou uma quantidade alterada em projeto já aprovado é detectada sozinha e vai para revisão.</dd>
               <dt>Destaques técnicos</dt><dd>Dois perfis (master e analista) com acesso restrito ao que cada um pode editar. Edição simultânea segura, com gravação só dos campos alterados, backups rotativos e verificação de integridade do banco. Migração da infraestrutura para o padrão da TI (Docker, PostgreSQL e segredos fora do código), revisão de segurança com base no OWASP Top 10 e scans de vulnerabilidade. Em produção com login corporativo via Microsoft Entra ID, banco PostgreSQL e integração com a API do SharePoint. Histórico de alterações de cada peça guardado como base para um futuro modelo de previsão de atrasos.</dd>
             </dl>
@@ -186,8 +186,8 @@ p{margin:0 0 14px}
             <p>Sistema que organiza todo o processo de licitação da fábrica, com prazos definidos, alertas e e-mails automáticos, cálculos e controle de SLA em cada etapa.</p>
             <dl>
               <dt>Problema</dt><dd>As licitações da fábrica corriam por e-mail: sem visão única do andamento, sem prazos padronizados e com risco de atraso ou de perda de informação entre as áreas envolvidas.</dd>
-              <dt>Meu papel</dt><dd>Fui acionado por outro departamento depois do resultado do sistema de gestão de projetos. Mapeei o processo, defini as etapas e os tempos esperados e construí o sistema inteiro em Power Apps, com alertas, envio automático de e-mails e cálculos.</dd>
-              <dt>Resultado</dt><dd>A fábrica passou a ter todos os tempos do processo bem definidos e acompanhados por SLA. Alertas, e-mails e cálculos, que antes eram manuais, passaram a ser automáticos, e o andamento de cada licitação ficou visível em um só lugar. O projeto nasceu de um pedido direto de outro departamento, depois do resultado do sistema de gestão de projetos.</dd>
+              <dt>Meu papel</dt><dd>A pedido de outro departamento, mapeei o processo, defini as etapas e os tempos esperados e construí o sistema inteiro em Power Apps, com alertas, envio automático de e-mails e cálculos.</dd>
+              <dt>Resultado</dt><dd>A fábrica passou a ter todos os tempos do processo bem definidos e acompanhados por SLA. Alertas, e-mails e cálculos, que antes eram manuais, passaram a ser automáticos, e o andamento de cada licitação ficou visível em um só lugar.</dd>
             </dl>
             <ul class="tags"><li>Power Apps</li><li>Automação de processos</li><li>Gestão de SLA</li><li>Alertas automáticos</li><li>E-mails automáticos</li><li>Mapeamento de processos</li></ul>
           </div>
