@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portfólio · [Seu nome]</title>
-<meta name="description" content="Portfólio profissional de [Seu nome], [cargo]. Projetos, carreira, stack e contato.">
-<meta property="og:title" content="Portfólio · [Seu nome]">
-<meta property="og:description" content="Portfólio profissional de [Seu nome], [cargo].">
+<title>Caio Silvério Lopes · Gestão de Projetos, Dados e Automação</title>
+<meta name="description" content="Caio Silvério Lopes, estagiário em Gestão de Projetos na HPE Automotores. Automação com Python, ETL, indicadores e dashboards que transformam dados em decisão.">
+<meta property="og:title" content="Caio Silvério Lopes · Gestão de Projetos, Dados e Automação">
+<meta property="og:description" content="Automação com Python, ETL, indicadores e dashboards. Uma rotina de 50 horas por mês reduzida a 4 minutos.">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -67,6 +68,9 @@ p{margin:0 0 14px}
 .timeline li::before{content:"";position:absolute;left:-26px;top:9px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
 .timeline .when{font:500 .8rem 'JetBrains Mono',monospace;color:var(--muted)}
 .timeline h4{margin:2px 0 4px;font-size:1.02rem}
+.timeline ul{margin:8px 0 0;padding-left:18px;font-size:.95rem}
+.timeline ul li{padding:0 0 6px;position:static}
+.timeline ul li::before{content:none}
 
 .stack{display:grid;grid-template-columns:140px 1fr;gap:14px 24px}
 .stack dt{font-weight:600;color:var(--muted)}
@@ -93,8 +97,8 @@ p{margin:0 0 14px}
 <div class="layout">
   <aside>
     <div>
-      <h1><span class="ph">[Seu nome]</span></h1>
-      <p class="role"><span class="ph">[Cargo / especialidade]</span></p>
+      <h1>Caio Silvério Lopes</h1>
+      <p class="role">Gestão de Projetos · Dados e Automação</p>
     </div>
     <nav aria-label="Seções">
       <ul>
@@ -117,28 +121,28 @@ p{margin:0 0 14px}
   <main>
     <section id="sobre">
       <h2>Sobre</h2>
-      <p><span class="ph">[Parágrafo curto: quem você é, o que faz e que tipo de problema gosta de resolver.]</span></p>
-      <p><span class="ph">[Segundo parágrafo: o que você busca agora e no que está se aprofundando.]</span></p>
+      <p>Sou estagiário em Gestão de Projetos na HPE Automotores, onde uso dados e automação para tirar trabalho manual da frente das equipes e colocar informação confiável na mão de quem decide.</p>
+      <p>Construo pipelines de ETL em Python sobre Oracle e SQL Server, indicadores com alertas estatísticos, dashboards para a gestão e rotinas de RPA. Também apoio o planejamento de projetos, o acompanhamento de cronogramas e planos de ação e a análise de causa raiz (8D), sempre com a mentalidade de Lean Six Sigma: medir, eliminar desperdício e entregar resultado verificável.</p>
+      <p>Meu diferencial é juntar as duas pontas: entendo o processo do negócio e sei automatizá-lo. Um exemplo: uma conferência que consumia 50 horas de analistas por mês passou a rodar para todos os projetos em 4 minutos, sem nenhum custo de licença.</p>
     </section>
 
     <section id="projetos">
       <h2>Projetos</h2>
 
       <div class="area">
-        <h3><span class="ph">[Área, ex.: Automação e dados]</span></h3>
+        <h3>Automação e dados</h3>
 
         <article class="proj">
-          <div class="when"><span class="ph">[2025 – 2026]</span></div>
+          <div class="when"><span class="ph">[período]</span></div>
           <div>
-            <h4><span class="ph">[Nome do projeto]</span></h4>
-            <p><span class="ph">[Descrição em uma ou duas frases.]</span></p>
+            <h4>RPA de conferência de peças por projeto</h4>
+            <p>Robô em Python que lê a base de peças de todos os projetos em carteira, confere cada item e entrega ao gestor um relatório pronto, por projeto, sem precisar abrir planilhas uma a uma.</p>
             <dl>
-              <dt>Problema</dt><dd><span class="ph">[Qual dor ou necessidade existia.]</span></dd>
-              <dt>Meu papel</dt><dd><span class="ph">[O que você fez, de fato.]</span></dd>
-              <dt>Resultado</dt><dd><span class="ph">[Impacto, com números quando possível.]</span></dd>
+              <dt>Problema</dt><dd>Analistas gastavam cerca de 50 horas por mês abrindo uma planilha gigante de peças e conferindo item a item, projeto a projeto. O trabalho era lento, repetitivo e sujeito a erro, e a informação chegava ao gestor com atraso.</dd>
+              <dt>Meu papel</dt><dd>Concebi e desenvolvi a solução de ponta a ponta: levantei a regra de conferência com os usuários, tratei e cruzei os dados com pandas, gerei o relatório final com openpyxl e coloquei a rotina para rodar todo dia.</dd>
+              <dt>Resultado</dt><dd>De 50 horas mensais de análise manual para cerca de 4 minutos para todos os projetos, com acompanhamento diário em vez de mensal. Cada projeto passou a mostrar de forma direta, por exemplo, a data prevista de chegada de cada peça ou que ela não se aplica (N/A). Custo de implantação: zero, apenas código e análise de dados.</dd>
             </dl>
-            <ul class="tags"><li><span class="ph">[Tecnologia]</span></li><li><span class="ph">[Tecnologia]</span></li></ul>
-            <div class="plinks"><a href="#"><span class="ph">[Código]</span></a><a href="#"><span class="ph">[Demo]</span></a></div>
+            <ul class="tags"><li>Python</li><li>pandas</li><li>openpyxl</li><li>RPA</li><li>Automação</li><li>Análise de dados</li></ul>
           </div>
         </article>
       </div>
@@ -166,9 +170,15 @@ p{margin:0 0 14px}
       <h2>Carreira</h2>
       <ol class="timeline">
         <li>
-          <div class="when"><span class="ph">[Início – Atual]</span></div>
-          <h4><span class="ph">[Cargo]</span> · <span class="ph">[Empresa]</span></h4>
-          <p><span class="ph">[O que fez e entregou.]</span></p>
+          <div class="when">Desde mar/2025 · <span data-since="2025-03">1 ano e 7 meses</span></div>
+          <h4>Estagiário de Gestão de Projetos · HPE Automotores</h4>
+          <ul>
+            <li><strong>Indicadores e estatística:</strong> pipeline de ETL em Python consolidando Oracle e SQL Server, com alertas por percentil (P75, P90 e P97) para detectar desvios em tempo real, lógica equivalente ao monitoramento de TMA e SLA.</li>
+            <li><strong>Dashboards para a gestão:</strong> indicadores web e dashboards de rastreabilidade, qualidade e desempenho que apoiam a decisão dos gestores.</li>
+            <li><strong>Planejamento e acompanhamento:</strong> cronogramas, indicadores e planos de ação; estruturação do portfólio de projetos em Power Apps, SharePoint e Power Automate, com fluxos organizados em Kanban.</li>
+            <li><strong>Qualidade e causa raiz:</strong> análise de divergências, levantamento de documentos de falha de processo (Ordem de Engenharia, Desvio de Engenharia e PPL) e relatórios 8D, alinhados a Lean Six Sigma.</li>
+            <li><strong>Automação (RPA):</strong> rotinas em Python que eliminam conferências manuais e liberam a equipe para análise crítica e planejamento.</li>
+          </ul>
         </li>
         <li>
           <div class="when"><span class="ph">[Início – Fim]</span></div>
@@ -181,10 +191,11 @@ p{margin:0 0 14px}
     <section id="stack">
       <h2>Stack</h2>
       <dl class="stack">
-        <dt>Linguagens</dt><dd><span class="ph">[Python, JavaScript, ...]</span></dd>
-        <dt>Frameworks</dt><dd><span class="ph">[...]</span></dd>
-        <dt>Dados</dt><dd><span class="ph">[...]</span></dd>
-        <dt>Infra e ferramentas</dt><dd><span class="ph">[Git, Docker, ...]</span></dd>
+        <dt>Linguagens</dt><dd>Python, SQL <span class="ph">[outras]</span></dd>
+        <dt>Dados e automação</dt><dd>pandas, openpyxl, ETL, RPA, Oracle, SQL Server, análise estatística (percentis)</dd>
+        <dt>Dashboards e BI</dt><dd>Indicadores web e dashboards de gestão <span class="ph">[ferramentas, ex.: Power BI]</span></dd>
+        <dt>Low-code Microsoft</dt><dd>Power Apps, Power Automate, SharePoint</dd>
+        <dt>Gestão e qualidade</dt><dd>Gestão de projetos, cronogramas e planos de ação, Kanban, 8D, análise de causa raiz, princípios de Lean Six Sigma</dd>
       </dl>
     </section>
 
@@ -220,6 +231,15 @@ p{margin:0 0 14px}
     var next=dark?'light':'dark';
     root.setAttribute('data-theme',next);
     try{localStorage.setItem('theme',next)}catch(e){}
+  });
+  document.querySelectorAll('[data-since]').forEach(function(el){
+    var p=el.getAttribute('data-since').split('-'),n=new Date();
+    var m=(n.getFullYear()-+p[0])*12+(n.getMonth()+1-+p[1]);
+    if(m<1)return;
+    var y=Math.floor(m/12),r=m%12,t=[];
+    if(y)t.push(y+(y>1?' anos':' ano'));
+    if(r)t.push(r+(r>1?' meses':' mês'));
+    el.textContent=t.join(' e ');
   });
   var links=[].slice.call(document.querySelectorAll('nav a'));
   var io=new IntersectionObserver(function(es){
