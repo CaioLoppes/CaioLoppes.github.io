@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfólio · [Seu nome]</title>
+<meta name="description" content="Portfólio profissional de [Seu nome], [cargo]. Projetos, carreira, stack e contato.">
+<meta property="og:title" content="Portfólio · [Seu nome]">
+<meta property="og:description" content="Portfólio profissional de [Seu nome], [cargo].">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fafaf7;--surface:#ffffff;--text:#1c1c1a;--muted:#6b6b66;--line:#e4e3dc;
+  --accent:#2f5d50;--accent-soft:#e3eeea;--ph:#fff2a8;--ph-text:#5c4a00;
+  --sidebar:300px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#141413;--surface:#1c1c1a;--text:#ecebe5;--muted:#9a9990;--line:#2d2d2a;
+    --accent:#7fc0ab;--accent-soft:#1f2e29;--ph:#4a3f10;--ph-text:#ffe58a;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141413;--surface:#1c1c1a;--text:#ecebe5;--muted:#9a9990;--line:#2d2d2a;
+  --accent:#7fc0ab;--accent-soft:#1f2e29;--ph:#4a3f10;--ph-text:#ffe58a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.ph{background:var(--ph);color:var(--ph-text);padding:0 .25em;border-radius:3px}
+
+.layout{display:grid;grid-template-columns:var(--sidebar) 1fr;min-height:100vh}
+aside{position:sticky;top:0;height:100vh;padding:48px 32px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:28px}
+aside h1{font-size:1.6rem;line-height:1.2;margin:0 0 6px;letter-spacing:-.02em}
+aside .role{color:var(--muted);margin:0}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+nav a{display:block;padding:6px 0;color:var(--muted);font-weight:500;border-left:2px solid transparent;padding-left:12px;margin-left:-12px}
+nav a:hover,nav a.active{color:var(--text);border-left-color:var(--accent);text-decoration:none}
+.links{margin-top:auto;display:flex;flex-direction:column;gap:6px;font-size:.92rem}
+#theme{align-self:flex-start;background:none;border:1px solid var(--line);color:var(--muted);padding:6px 12px;border-radius:999px;font:inherit;font-size:.85rem;cursor:pointer}
+#theme:hover{color:var(--text);border-color:var(--muted)}
+
+main{padding:64px 56px 96px;max-width:860px}
+section{margin-bottom:72px;scroll-margin-top:32px}
+h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin:0 0 28px;font-weight:600}
+h3{font-size:1.05rem;margin:36px 0 8px;color:var(--accent)}
+p{margin:0 0 14px}
+
+.proj{display:grid;grid-template-columns:110px 1fr;gap:8px 24px;padding:22px 0;border-top:1px solid var(--line)}
+.proj .when{font:500 .82rem 'JetBrains Mono',monospace;color:var(--muted);padding-top:4px}
+.proj h4{margin:0 0 6px;font-size:1.05rem}
+.proj dl{margin:10px 0 0;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:.93rem}
+.proj dt{font-weight:600;color:var(--muted)}
+.proj dd{margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;list-style:none;padding:0}
+.tags li{font:.75rem 'JetBrains Mono',monospace;background:var(--accent-soft);color:var(--accent);padding:2px 9px;border-radius:999px}
+.plinks{display:flex;gap:16px;margin-top:10px;font-size:.9rem}
+
+.timeline{list-style:none;margin:0;padding:0 0 0 20px;border-left:1px solid var(--line)}
+.timeline li{position:relative;padding:0 0 32px 8px}
+.timeline li::before{content:"";position:absolute;left:-26px;top:9px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.timeline .when{font:500 .8rem 'JetBrains Mono',monospace;color:var(--muted)}
+.timeline h4{margin:2px 0 4px;font-size:1.02rem}
+
+.stack{display:grid;grid-template-columns:140px 1fr;gap:14px 24px}
+.stack dt{font-weight:600;color:var(--muted)}
+.stack dd{margin:0}
+.edu{list-style:none;padding:0;margin:0}
+.edu li{padding:14px 0;border-top:1px solid var(--line)}
+.edu .when{font:500 .8rem 'JetBrains Mono',monospace;color:var(--muted)}
+
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr}
+  aside{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:28px 20px;gap:18px}
+  nav ul{flex-direction:row;flex-wrap:wrap;gap:4px 16px}
+  nav a{border-left:0;padding:4px 0;margin:0}
+  .links{margin-top:0;flex-direction:row;flex-wrap:wrap;gap:6px 18px}
+  main{padding:36px 20px 72px}
+  .proj{grid-template-columns:1fr}
+  .stack{grid-template-columns:1fr;gap:2px}
+  .stack dd{margin-bottom:12px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside>
+    <div>
+      <h1><span class="ph">[Seu nome]</span></h1>
+      <p class="role"><span class="ph">[Cargo / especialidade]</span></p>
+    </div>
+    <nav aria-label="Seções">
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#carreira">Carreira</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <button id="theme" type="button" aria-label="Alternar tema claro e escuro">Alternar tema</button>
+    <div class="links">
+      <a href="#"><span class="ph">[GitHub]</span></a>
+      <a href="#"><span class="ph">[LinkedIn]</span></a>
+      <a href="#"><span class="ph">[E-mail]</span></a>
+    </div>
+  </aside>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre</h2>
+      <p><span class="ph">[Parágrafo curto: quem você é, o que faz e que tipo de problema gosta de resolver.]</span></p>
+      <p><span class="ph">[Segundo parágrafo: o que você busca agora e no que está se aprofundando.]</span></p>
+    </section>
+
+    <section id="projetos">
+      <h2>Projetos</h2>
+
+      <div class="area">
+        <h3><span class="ph">[Área, ex.: Automação e dados]</span></h3>
+
+        <article class="proj">
+          <div class="when"><span class="ph">[2025 – 2026]</span></div>
+          <div>
+            <h4><span class="ph">[Nome do projeto]</span></h4>
+            <p><span class="ph">[Descrição em uma ou duas frases.]</span></p>
+            <dl>
+              <dt>Problema</dt><dd><span class="ph">[Qual dor ou necessidade existia.]</span></dd>
+              <dt>Meu papel</dt><dd><span class="ph">[O que você fez, de fato.]</span></dd>
+              <dt>Resultado</dt><dd><span class="ph">[Impacto, com números quando possível.]</span></dd>
+            </dl>
+            <ul class="tags"><li><span class="ph">[Tecnologia]</span></li><li><span class="ph">[Tecnologia]</span></li></ul>
+            <div class="plinks"><a href="#"><span class="ph">[Código]</span></a><a href="#"><span class="ph">[Demo]</span></a></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="area">
+        <h3><span class="ph">[Outra área, ex.: Web]</span></h3>
+
+        <article class="proj">
+          <div class="when"><span class="ph">[Período]</span></div>
+          <div>
+            <h4><span class="ph">[Nome do projeto]</span></h4>
+            <p><span class="ph">[Descrição.]</span></p>
+            <dl>
+              <dt>Problema</dt><dd><span class="ph">[...]</span></dd>
+              <dt>Meu papel</dt><dd><span class="ph">[...]</span></dd>
+              <dt>Resultado</dt><dd><span class="ph">[...]</span></dd>
+            </dl>
+            <ul class="tags"><li><span class="ph">[Tecnologia]</span></li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="carreira">
+      <h2>Carreira</h2>
+      <ol class="timeline">
+        <li>
+          <div class="when"><span class="ph">[Início – Atual]</span></div>
+          <h4><span class="ph">[Cargo]</span> · <span class="ph">[Empresa]</span></h4>
+          <p><span class="ph">[O que fez e entregou.]</span></p>
+        </li>
+        <li>
+          <div class="when"><span class="ph">[Início – Fim]</span></div>
+          <h4><span class="ph">[Cargo]</span> · <span class="ph">[Empresa]</span></h4>
+          <p><span class="ph">[O que fez e entregou.]</span></p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="stack">
+      <h2>Stack</h2>
+      <dl class="stack">
+        <dt>Linguagens</dt><dd><span class="ph">[Python, JavaScript, ...]</span></dd>
+        <dt>Frameworks</dt><dd><span class="ph">[...]</span></dd>
+        <dt>Dados</dt><dd><span class="ph">[...]</span></dd>
+        <dt>Infra e ferramentas</dt><dd><span class="ph">[Git, Docker, ...]</span></dd>
+      </dl>
+    </section>
+
+    <section id="formacao">
+      <h2>Formação</h2>
+      <ul class="edu">
+        <li>
+          <div class="when"><span class="ph">[Período]</span></div>
+          <strong><span class="ph">[Curso]</span></strong> · <span class="ph">[Instituição]</span>
+        </li>
+        <li>
+          <div class="when"><span class="ph">[Ano]</span></div>
+          <strong><span class="ph">[Certificação]</span></strong> · <span class="ph">[Emissor]</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p><span class="ph">[Frase curta convidando para conversar.]</span></p>
+      <p><a href="#"><span class="ph">[E-mail]</span></a> · <a href="#"><span class="ph">[LinkedIn]</span></a> · <a href="#"><span class="ph">[GitHub]</span></a></p>
+    </section>
+  </main>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('theme');
+  try{var s=localStorage.getItem('theme');if(s)root.setAttribute('data-theme',s)}catch(e){}
+  btn.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||
+      (!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);
+    var next=dark?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next)}catch(e){}
+  });
+  var links=[].slice.call(document.querySelectorAll('nav a'));
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id)})}
+    });
+  },{rootMargin:'-30% 0px -60% 0px'});
+  document.querySelectorAll('main section').forEach(function(s){io.observe(s)});
+})();
+</script>
+</body>
+</html>
